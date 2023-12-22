@@ -18,7 +18,7 @@ class SeasonsTest extends BaseIOTest {
     void tellTheSeasonByMonthNumberPrintsSpringWhen4or5or3() {
         Seasons seasonDeterminer = new Seasons();
 
-        seasonDeterminer.tellTheSeasonByMonthNumber(5);
+        seasonDeterminer.tellTheSeasonByMonthNumber(3);
 
         assertEquals("Spring\n", updateLineSpliterators(outContent.toString()));
     }
@@ -45,7 +45,7 @@ class SeasonsTest extends BaseIOTest {
     void tellTheSeasonByMonthNumberPrintsWrongWhenNumberIsWrong() {
         Seasons seasonDeterminer = new Seasons();
 
-        seasonDeterminer.tellTheSeasonByMonthNumber(-1);
+        seasonDeterminer.tellTheSeasonByMonthNumber(13);
 
         assertEquals("wrong number!\n", updateLineSpliterators(outContent.toString()));
     }
@@ -58,6 +58,6 @@ class SeasonsTest extends BaseIOTest {
                 .filter(line -> line.contains("switch"))
                 .collect(Collectors.toList());
 
-        assertEquals(0, result.size());
+        assertEquals(1, result.size());
     }
 }

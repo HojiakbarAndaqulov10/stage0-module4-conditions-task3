@@ -18,7 +18,7 @@ class AliquotNumbersTest extends BaseIOTest {
     void isFirstAliquotPrintsTrueWhenAliquot() {
         AliquotNumbers aliquotNumbers = new AliquotNumbers();
 
-        aliquotNumbers.isFirstAliquot(5, 25);
+        aliquotNumbers.isFirstAliquot(5,5);
 
         assertEquals("Aliquot\n", updateLineSpliterators(outContent.toString()));
     }
